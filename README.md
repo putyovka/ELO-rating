@@ -167,7 +167,7 @@ Node.js, npm, Adonis.js telepítése.
 Fejlesztési lépésenként a repo feltöltése commit-al.
 ##### 3.1.2. Könyvtárstruktúra, funkciók
 
-A GitHub repo-ban látható.
+A GitHub repo-ban lesz látható, természetesen még nem végleges.
 
 ### 4. Tesztelés
 #### 4.1. Tesztelési környezetek
@@ -184,25 +184,27 @@ Egységtesztelés közben a modellek működését, a problémamentes funkcióka
 **Egyéb követelmények:** Internet böngésző telepítése, JavaScript ajánlott
 
 **Program használata:**
-Böngészőben nyissuk meg a főoldalt
-Jobb felső sarokban kattintsunk a Bejelentkezés feliratra
-Bejelentkezés/Regisztráció után a Lista oldalra jutunk
-Bal alsó sarokban az Új közösség indítása gombra kattintva tudunk új közösséget indítani
-Adjunk a közösségnek nevet, és válasszunk neki kategóriát
-Ha már létezik ilyen néven létrehozott közösség, az oldal hibaüzenetet dob.
-A Küldés gombra kattintva mentsük el az adatokat
-A Saját közösségek listázása oldalon a Törlés gombra kattintva törölhetjük a közösségünket, erről megerősítést kér egy felugró ablak
-A Saját közösségek listázása oldalon a Módosítás gombra kattintva módosíthatjuk a közösségünk nevét és kategóriáját
-A Saját közösségek listázása oldalon a Megtekintés gombra kattintva a megtekintés oldalra jutunk
-A Saját közösség megtekintése oldalon bal oldalon látható a közösség renglistája, jobboldalon a bevitt meccsek listája
-A Saját közösség megtekintése oldalon a Törlés gombra kattintva törölhetjük a közösségünket, erről megerősítést kér egy felugró ablak
-A Saját közösség megtekintése oldalon a Módosítás gombra kattintva módosíthatjuk egy korábban bevitt meccsünk adatait
-A Saját közösség megtekintése oldalon az Új mérkőzés bevitele gombra kattintva tudunk új mérkőzést bevinni.
-Az új mérkőzés bevitele oldalon meg kell adni a két játékos nevét, valamint egy legördülő menüből kiválasztani az eredményt (1 játékos nyert, 2. játékos nyert, döntetlen). 
-A Küldés gombra kattintva mentsük el az adatokat
+- Böngészőben nyissuk meg a főoldalt
+- Jobb felső sarokban kattintsunk a Bejelentkezés feliratra
 
-6. Irodalomjegyzék:
-http://webprogramozas.inf.elte.hu/alkfejl.php
-http://ade.web.elte.hu/wabp/lecke2_lap1.html
-http://webprogramozas.inf.elte.hu/alkfejl/A_dokumentacio_felepitese.pdf
-https://github.com/pessaai/ckd193-beadando
+- Böngészőben nyissuk meg a főoldalt
+- Jobb felső sarokban kattintsunk a Bejelentkezés feliratra
+- Bejelentkezés/Regisztráció után a Lista oldalra jutunk
+- Bal alsó sarokban az Új közösség indítása gombra kattintva tudunk új közösséget indítani
+- Adjunk a közösségnek nevet, és válasszunk neki kategóriát
+- Ha már létezik ilyen néven létrehozott közösség, az oldal hibaüzenetet dob.
+- A Küldés gombra kattintva mentsük el az adatokat
+- A Saját közösségek listázása oldalon a Törlés gombra kattintva törölhetjük a közösségünket, erről megerősítést kér egy felugró ablak
+- A Saját közösségek listázása oldalon a Módosítás gombra kattintva módosíthatjuk a közösségünk nevét és kategóriáját
+- A Saját közösségek listázása oldalon a Megtekintés gombra kattintva a megtekintés oldalra jutunk
+- A Saját közösség megtekintése oldalon bal oldalon látható a közösség renglistája, jobboldalon a bevitt meccsek listájaA Saját közösség megtekintése oldalon a Törlés gombra kattintva törölhetjük a közösségünket, erről megerősítést kér egy felugró ablak
+- A Saját közösség megtekintése oldalon a Módosítás gombra kattintva módosíthatjuk egy korábban bevitt meccsünk adatait
+- A Saját közösség megtekintése oldalon az Új mérkőzés bevitele gombra kattintva tudunk új mérkőzést bevinni.
+- Az új mérkőzés bevitele oldalon meg kell adni a két játékos nevét, valamint egy legördülő menüből kiválasztani az eredményt (1 játékos nyert, 2. játékos nyert, döntetlen). 
+- A Küldés gombra kattintva mentsük el az adatokat
+
+### 6. Irodalomjegyzék:
+- http://webprogramozas.inf.elte.hu/alkfejl.php
+- http://ade.web.elte.hu/wabp/lecke2_lap1.html
+- http://webprogramozas.inf.elte.hu/alkfejl/A_dokumentacio_felepitese.pdf
+- https://github.com/pessaai/ckd193-beadando
