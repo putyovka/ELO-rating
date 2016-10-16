@@ -1,60 +1,72 @@
-ELO-rating
+### ELO-rating
 
- ### 1. Követelményanalízis
-1.1. Célkitűzés, projektindító dokumentum
+### 1. Követelményanalízis
+#### 1.1. Célkitűzés, projektindító dokumentum
 A program célja kétszereplős játékok játékos-közösségeinek (a továbbiakban: közösség) az egymáshoz viszonyított aktuális játékerejének mérésére sok helyen használt Élő-pontrendszer vezetése, a bevitt mérkőzések alapján kialakult ranglista nyilvánossá tétele. A regisztrált felhasználók különböző kategóriákban indíthatnak közösségeket -- a legelterjedtebb a sakkban, ostáblában, különböző videó-játékokban, de akár labdarúgásban is használhatják. Egy közösséghez aztán mérkőzéseket lehet felvinni, ahol meg kell adni a két játékos (nick)nevét, illetve a mérkőzés eredményét. A megadott adatok alapján egy közösség ranglistája a Nemzetközi Sakkszövetség (FIDE) által használt képlet alapján kerül kiszámításra. A listák nyilvánosak, adatok bevitele, módosítása vagy törlése viszont csak az adott közösség indítójának érhető el bejelentkezés után.
-Funkcionális követelmények:
-    Vendégként legyen lehetőség:
-a főoldalon kiemelt közösségeket látni kategóriánként
-a közösségek között szabadon böngészni
-regisztrálni
+###### Funkcionális követelmények:
+**Vendégként** legyen lehetőség:
+* a főoldalon kiemelt közösségeket látni kategóriánként
+* a közösségek között szabadon böngészni
+* regisztrálni
 
-Felhasználóként legyen lehetőség bejelentkezni az oldalra, majd:
-új közösséget indítani
-saját közösséget módosítani vagy törölni
-saját közösséghez új meccset hozzáadni
-saját közösség meccsét módosítani vagy törölni
-Nem funkcionális követelmények:
-Áttekinthetőség: a játék-kategóriák színekkel vannak csoportosítva
-Használhatóság: ésszerű elrendezés, könnyen kezelhetőség
-Megbízhatóság: jelszóval védett funkciók, és a jelszavak védelme a háttérben. Hibásan bevitt adatok esetén a program jól láthatóan jelezzen a felhasználónak, és emelje ki a hibás beviteli mezőket. A jól bevitt adatok maradjanak az űrlapban.
-Karbantarthatóság: könnyen lehessen bővíteni, a különböző típusú fájlok külön csoportosítva, ésszerűen legyenek felbontva, a könnyebb fejleszthetőség miatt
+**Felhasználóként** legyen lehetőség bejelentkezni az oldalra, majd:
+* új közösséget indítani
+* saját közösséget módosítani vagy törölni
+* saját közösséghez új meccset hozzáadni
+* saját közösség meccsét módosítani vagy törölni
+
+###### Nem funkcionális követelmények:
+* **Áttekinthetőség:** a játék-kategóriák színekkel vannak csoportosítva
+* **Használhatóság:** ésszerű elrendezés, könnyen kezelhetőség
+* **Megbízhatóság:** jelszóval védett funkciók, és a jelszavak védelme a háttérben. Hibásan bevitt adatok esetén a program jól láthatóan jelezzen a felhasználónak, és emelje ki a hibás beviteli mezőket. A jól bevitt adatok maradjanak az űrlapban.
+* **Karbantarthatóság:** könnyen lehessen bővíteni, a különböző típusú fájlok külön csoportosítva, ésszerűen legyenek felbontva, a könnyebb fejleszthetőség miatt
 
 
-1.2. Szakterületi fogalomjegyzék
-Játékos: egy kétszereplős játék egyik résztvevője.
-Játékos-közösség: játékosok csoportja, akik tetszőleges rendszerességgel játszanak egymás ellen, és igényt tartanak arra, hogy az egymáshoz viszonyított játékerejük számszerűen kifejezhető legyen.
-Élő-pontrendszer: kétszereplős játékokban, mint a sakkban vagy a góban versenyzők egymáshoz viszonyított aktuális játékerejének mérésére létrehozott rendszer.
+#### 1.2. Szakterületi fogalomjegyzék
+**Játékos:** egy kétszereplős játék egyik résztvevője.
+
+**Játékos-közösség**: játékosok csoportja, akik tetszőleges rendszerességgel játszanak egymás ellen, és igényt tartanak arra, hogy az egymáshoz viszonyított játékerejük számszerűen kifejezhető legyen.
+
+**Élő-pontrendszer:** kétszereplős játékokban, mint a sakkban vagy a góban versenyzők egymáshoz viszonyított aktuális játékerejének mérésére létrehozott rendszer.
 Nemzetközileg ismert neve Elo (gyakran nagybetűkkel ELO, bár nem betűszó). Nevét Élő Árpád (angol, külföldön ismertebb nevén Arpad Elo) magyar születésű amerikai fizikaprofesszorról kapta. (Wikipedia)
-Mérkőzés: két játékos által végigjátszott játék, aminek a kimenetele az első játékos győzelme, a 2. játékos győzelme vagy döntetlen lehet.
-Ranglista: egy közösség összes tagjából álló lista, amely az Élő-pontszámuk alapján van rendezve.
-Nemzetközi Sakkszövetség (FIDE): a Nemzetközi Sakkszövetség vagy (Fédération Internationale des Échecs, FIDE) egy nemzetközi szervezet, amely koordinálja a sakk mint sportág nemzetközi életét, nyilvántartja és minősíti a sakkversenyzőket, szervezi a férfi, női, ifjúsági és junior világbajnokságokat, a sakkolimpiákat, kontinensbajnokságokat, és egyéb nemzetközi versenyeket, meghatározza a nemzetközileg érvényes szabályokat. (Wikipedia)
-Nick-név: az igazi tulajdonnév helyettesítésére szolgáló néc.
+
+**Mérkőzés:** két játékos által végigjátszott játék, aminek a kimenetele az első játékos győzelme, a 2. játékos győzelme vagy döntetlen lehet.
+
+**Ranglista:** egy közösség összes tagjából álló lista, amely az Élő-pontszámuk alapján van rendezve.
+
+**Nemzetközi Sakkszövetség (FIDE)**: a Nemzetközi Sakkszövetség vagy (Fédération Internationale des Échecs, FIDE) egy nemzetközi szervezet, amely koordinálja a sakk mint sportág nemzetközi életét, nyilvántartja és minősíti a sakkversenyzőket, szervezi a férfi, női, ifjúsági és junior világbajnokságokat, a sakkolimpiákat, kontinensbajnokságokat, és egyéb nemzetközi versenyeket, meghatározza a nemzetközileg érvényes szabályokat. (Wikipedia)
+
+**Nick-név:** az igazi tulajdonnév helyettesítésére szolgáló néc.
 
 
-1.3. Használatieset-modell
+#### 1.3. Használatieset-modell
 
 Szerepkörök:
 
-Vendég: közösségek keresését, böngészését és megtekintését végezheti
-Felhasználó: a vendég szerepkörén túl a saját közösségeinek kezelésére (új, módosít, törlés) és a a saját közösségei mérkőzéseinek (új, módosít, törlés) képes. 
+* **Vendég:** közösségek keresését, böngészését és megtekintését végezheti
+* **Felhasználó:** a vendég szerepkörén túl a saját közösségeinek kezelésére (új, módosít, törlés) és a a saját közösségei mérkőzéseinek (új, módosít, törlés) képes. 
+
+
+
+![GitHub Logo](/images/usecae.png)
+Format: ![Alt Text](url)
 
 
 
 
 
 
-2. Tervezés
-2.1. Architektúra terv
-2.1.1. Oldaltérkép:
+### 2. Tervezés
+#### 2.1. Architektúra terv
+##### 2.1.1. Oldaltérkép:
 
 Publikus:
 
-- Főoldal
-- Közösségek böngészése
-    + Közösség megtekintése
-- Belépés
-- Regisztráció
+* Főoldal
+* Közösségek böngészése
+	* Közösség megtekintése
+* Belépés
+* Regisztráció
 
 Felhasználó:
 
@@ -64,9 +76,9 @@ Felhasználó:
 - Saját közösség módosítása
 - Saját közösség törlése
 - Saját közösség megtekintése
-Új mérkőzés bevitele
-Mérkőzés módosítása
-Mérkőzés törlése
+	- Új mérkőzés bevitele
+	- Mérkőzés módosítása
+	- Mérkőzés törlése
 
 2.1.2. Végpontok
 GET/: főoldal
