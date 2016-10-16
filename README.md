@@ -55,7 +55,7 @@ Szerepkörök:
 #### 2.1. Architektúra terv
 ##### 2.1.1. Oldaltérkép:
 
-Publikus:
+**Publikus:**
 
 * Főoldal
 * Közösségek böngészése
@@ -63,7 +63,7 @@ Publikus:
 * Belépés
 * Regisztráció
 
-Felhasználó:
+**Felhasználó:**
 
 - Főoldal
 - Kilépés
@@ -75,29 +75,31 @@ Felhasználó:
 	- Mérkőzés módosítása
 	- Mérkőzés törlése
 
-2.1.2. Végpontok
-GET/: főoldal
-GET/login: bejelentkező oldal
-POST/login: bejelentkező adatok felküldése
-GET/login/signup: regisztrációs oldal
-POST/login/signup: regisztrációs adatok felküldése
-GET/logout: kijelentkező oldal
-GET/communities/list: közösségek listázása
-GET/communities/new: új közösség indítása
-POST/communities/new: új közösség indításához szükséges adatok felküldése
-GET/communities/id: közösség oldala
-GET/communities/delete=id: saját közösség törlése
-GET/communities/edit=id: saját közösség adatainak módosítása
-POST/communities/edit=id: saját közösség módosítása, adatok felküldése
-GET/communities/id/list: saját közösség mérkőzéseinek listázása
-GET/communities/id/new: új mérkőzés bevitele
-POST/communities/id/new: új mérkőzés beviteléhez szükséges adatok felküldése
-GET/communities/id/delete=matchid: mérkőzés törlése
-GET/communities/id/edit=matchid: mérkőzés adatainak módosítása
-POST/communities/id/edit=matchid: mérkőzés módosítása, adatok felküldése
-2.2. Felhasználói-felület modell
-2.2.1.Oldalvázlatok:
+##### 2.1.2. Végpontok
+- GET/: főoldal
+- GET/login: bejelentkező oldal
+- POST/login: bejelentkező adatok felküldése
+- GET/login/signup: regisztrációs oldal
+- POST/login/signup: regisztrációs adatok felküldése
+- GET/logout: kijelentkező oldal
+- GET/communities/list: közösségek listázása
+- GET/communities/new: új közösség indítása
+- POST/communities/new: új közösség indításához szükséges adatok felküldése
+- GET/communities/id: közösség oldala
+- GET/communities/delete=id: saját közösség törlése
+- GET/communities/edit=id: saját közösség adatainak módosítása
+- POST/communities/edit=id: saját közösség módosítása, adatok felküldése
+- GET/communities/id/list: saját közösség mérkőzéseinek listázása
+- GET/communities/id/new: új mérkőzés bevitele
+- POST/communities/id/new: új mérkőzés beviteléhez szükséges adatok felküldése
+- GET/communities/id/delete=matchid: mérkőzés törlése
+- GET/communities/id/edit=matchid: mérkőzés adatainak módosítása
+- POST/communities/id/edit=matchid: mérkőzés módosítása, adatok felküldése
+
+#### 2.2. Felhasználói-felület modell
+##### 2.2.1.Oldalvázlatok:
 Főoldal
+![Főoldal](/images/főoldal.png "Főoldal")
 
 Közösségek böngészése
 
