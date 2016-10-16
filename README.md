@@ -47,8 +47,7 @@ Szerepkörök:
 * **Felhasználó:** a vendég szerepkörén túl a saját közösségeinek kezelésére (új, módosít, törlés) és a a saját közösségei mérkőzéseinek (új, módosít, törlés) képes. 
 
 
-![GitHub Logo](/images/usecase.png)
-Format: !(url)
+!(/images/usecase.png)
 
 
 
