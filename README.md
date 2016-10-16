@@ -99,53 +99,48 @@ Szerepkörök:
 #### 2.2. Felhasználói-felület modell
 ##### 2.2.1.Oldalvázlatok:
 Főoldal
+
 ![Főoldal](/images/Főoldal.jpg "Főoldal")
 
 Közösségek böngészése
 
-
+![Közösségek_böngészése](/images/Közösségek_böngészése.jpg "Közösségek_böngészése")
 
 Közösség megtekintése
 
-
-
+![Főoldal](/images/Főoldal.jpg "Főoldal")
 
 Regisztráció
 
-
-
-
+![Főoldal](/images/Főoldal.jpg "Főoldal")
 
 Bejelentkezés
 
+![Főoldal](/images/Főoldal.jpg "Főoldal")
 
 Közösségek listázása
 
-
-
-
+![Főoldal](/images/Főoldal.jpg "Főoldal")
 
 Új özösség indítása
 
+![Főoldal](/images/Főoldal.jpg "Főoldal")
 
 Közösség módosítása
 
-
-
-
+![Főoldal](/images/Főoldal.jpg "Főoldal")
 
 Saját közösség megtekintése
 
+![Főoldal](/images/Főoldal.jpg "Főoldal")
 
 Új mérkzőzés bevitele
 
-
-
+![Főoldal](/images/Főoldal.jpg "Főoldal")
 
 Mérkzozés módosítása
 
-
-
+![Főoldal](/images/Főoldal.jpg "Főoldal")
 
 2.2.2. Osztálymodell
 Adatmodell
