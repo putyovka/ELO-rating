@@ -108,39 +108,39 @@ Közösségek böngészése
 
 Közösség megtekintése
 
-![Főoldal](/images/Főoldal.jpg "Főoldal")
+![Közösség_megtekintése](/images/Közösség_megtekintése.jpg "Közösség_megtekintése")
 
 Regisztráció
 
-![Főoldal](/images/Főoldal.jpg "Főoldal")
+![Regisztráció](/images/Regisztráció.jpg "Regisztráció")
 
 Bejelentkezés
 
-![Főoldal](/images/Főoldal.jpg "Főoldal")
+![Bejelentkezés](/images/Bejelentkezés.jpg "Bejelentkezés")
 
 Közösségek listázása
 
-![Főoldal](/images/Főoldal.jpg "Főoldal")
+![Közösségek_listázása](/images/Közösségek_listázása.jpg "Közösségek_listázása")
 
 Új özösség indítása
 
-![Főoldal](/images/Főoldal.jpg "Főoldal")
+![Új_közösség_indítása](/images/Új_közösség_indítása.jpg "Új_közösség_indítása")
 
 Közösség módosítása
 
-![Főoldal](/images/Főoldal.jpg "Főoldal")
+![Közösség_módosítása](/images/Közösség_módosítása.jpg "Közösség_módosítása")
 
 Saját közösség megtekintése
 
-![Főoldal](/images/Főoldal.jpg "Főoldal")
+![Saját_közösség_megtekintése](/images/Saját_közösség_megtekintése.jpg "Saját_közösség_megtekintése")
 
 Új mérkzőzés bevitele
 
-![Főoldal](/images/Főoldal.jpg "Főoldal")
+![Új_mérkzőzés_bevitele](/images/Új_mérkzőzés_bevitele.jpg "Új_mérkzőzés_bevitele")
 
 Mérkzozés módosítása
 
-![Főoldal](/images/Főoldal.jpg "Főoldal")
+![Mérkzozés_módosítása](/images/Mérkzozés_módosítása.jpg "Mérkzozés_módosítása")
 
 2.2.2. Osztálymodell
 Adatmodell
