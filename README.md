@@ -3,7 +3,7 @@
 ### 1. Követelményanalízis
 #### 1.1. Célkitűzés, projektindító dokumentum
 A program célja kétszereplős játékok játékos-közösségeinek (a továbbiakban: közösség) az egymáshoz viszonyított aktuális játékerejének mérésére sok helyen használt Élő-pontrendszer vezetése, a bevitt mérkőzések alapján kialakult ranglista nyilvánossá tétele. A regisztrált felhasználók különböző kategóriákban indíthatnak közösségeket -- a legelterjedtebb a sakkban, ostáblában, különböző videó-játékokban, de akár labdarúgásban is használhatják. Egy közösséghez aztán mérkőzéseket lehet felvinni, ahol meg kell adni a két játékos (nick)nevét, illetve a mérkőzés eredményét. A megadott adatok alapján egy közösség ranglistája a Nemzetközi Sakkszövetség (FIDE) által használt képlet alapján kerül kiszámításra. A listák nyilvánosak, adatok bevitele, módosítása vagy törlése viszont csak az adott közösség indítójának érhető el bejelentkezés után.
-###### Funkcionális követelmények:
+##### **Funkcionális követelmények:**
 **Vendégként** legyen lehetőség:
 * a főoldalon kiemelt közösségeket látni kategóriánként
 * a közösségek között szabadon böngészni
@@ -15,7 +15,7 @@ A program célja kétszereplős játékok játékos-közösségeinek (a további
 * saját közösséghez új meccset hozzáadni
 * saját közösség meccsét módosítani vagy törölni
 
-###### Nem funkcionális követelmények:
+##### **Nem funkcionális követelmények:**
 * **Áttekinthetőség:** a játék-kategóriák színekkel vannak csoportosítva
 * **Használhatóság:** ésszerű elrendezés, könnyen kezelhetőség
 * **Megbízhatóság:** jelszóval védett funkciók, és a jelszavak védelme a háttérben. Hibásan bevitt adatok esetén a program jól láthatóan jelezzen a felhasználónak, és emelje ki a hibás beviteli mezőket. A jól bevitt adatok maradjanak az űrlapban.
@@ -98,7 +98,7 @@ Szerepkörök:
 
 #### 2.2. Felhasználói-felület modell
 ##### 2.2.1.Oldalvázlatok:
-Főoldal
+**Főoldal**
 
 ![Főoldal](/images/Főoldal.jpg "Főoldal")
 
