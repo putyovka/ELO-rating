@@ -51,6 +51,11 @@ Szerepkörök:
 
 
 
+![GitHub Logo](/images/usecase.png)
+Format: ![Alt Text](url)
+
+
+
 ### 2. Tervezés
 #### 2.1. Architektúra terv
 ##### 2.1.1. Oldaltérkép:
