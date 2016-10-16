@@ -46,13 +46,9 @@ Szerepkörök:
 * **Vendég:** közösségek keresését, böngészését és megtekintését végezheti
 * **Felhasználó:** a vendég szerepkörén túl a saját közösségeinek kezelésére (új, módosít, törlés) és a a saját közösségei mérkőzéseinek (új, módosít, törlés) képes. 
 
-[[ https://github.com/putyovka/ELO-rating/blob/master/images/usecase.png]]
-
-
-
 
 ![GitHub Logo](/images/usecase.png)
-Format: ![Alt Text](url)
+Format: !(url)
 
 
 
