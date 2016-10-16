@@ -102,74 +102,88 @@ Főoldal
 
 ![Főoldal](/images/Főoldal.jpg "Főoldal")
 
-Közösségek böngészése
+
+**Közösségek böngészése**
 
 ![Közösségek_böngészése](/images/Közösségek_böngészése.jpg "Közösségek_böngészése")
 
-Közösség megtekintése
+
+**Közösség megtekintése**
 
 ![Közösség_megtekintése](/images/Közösség_megtekintése.jpg "Közösség_megtekintése")
 
-Regisztráció
+
+**Regisztráció**
 
 ![Regisztráció](/images/Regisztráció.jpg "Regisztráció")
 
-Bejelentkezés
+
+**Bejelentkezés**
 
 ![Bejelentkezés](/images/Bejelentkezés.jpg "Bejelentkezés")
 
-Közösségek listázása
+
+**Közösségek listázása**
 
 ![Közösségek_listázása](/images/Közösségek_listázása.jpg "Közösségek_listázása")
 
-Új özösség indítása
+
+**Új özösség indítása**
 
 ![Új_közösség_indítása](/images/Új_közösség_indítása.jpg "Új_közösség_indítása")
 
-Közösség módosítása
+
+**Közösség módosítása**
 
 ![Közösség_módosítása](/images/Közösség_módosítása.jpg "Közösség_módosítása")
 
-Saját közösség megtekintése
+
+**Saját közösség megtekintése**
 
 ![Saját_közösség_megtekintése](/images/Saját_közösség_megtekintése.jpg "Saját_közösség_megtekintése")
 
-Új mérkzőzés bevitele
+
+**Új mérkzőzés bevitele**
 
 ![Új_mérkzőzés_bevitele](/images/Új_mérkzőzés_bevitele.jpg "Új_mérkzőzés_bevitele")
 
-Mérkzozés módosítása
+
+**Mérkzozés módosítása**
 
 ![Mérkzozés_módosítása](/images/Mérkzozés_módosítása.jpg "Mérkzozés_módosítása")
 
-2.2.2. Osztálymodell
-Adatmodell
+##### 2.2.2. Osztálymodell
+
+**Adatmodell**
+![adatmodell](/images/adatmodell.png "adatmodell")
 
 
-
-3. Implementáció
-3.1.1. Fejlesztőkörnyezet
+### 3. Implementáció
+##### 3.1.1. Fejlesztőkörnyezet
 Lokálisan történik a fejlesztés, Microsoft Visual Code segítségével.
 Új Github repository nyitása.
 Node.js, npm, Adonis.js telepítése.
 Új Adonis projekt indítása.
 Fejlesztési lépésenként a repo feltöltése commit-al.
-3.1.2. Könyvtárstruktúra, funkciók
+##### 3.1.2. Könyvtárstruktúra, funkciók
 
 A GitHub repo-ban látható.
 
-4. Tesztelés
-4.1. Tesztelési környezetek
+### 4. Tesztelés
+#### 4.1. Tesztelési környezetek
 Egységtesztelés közben a modellek működését, a problémamentes funkciókat és műveleteket ellenőrizzük. Másodszor a funkciónális teszetelés segítségével a végpontokat ellenőrizzük, a megfelelő tartalom megjelenését, és az oldalak működőképességét.
-4.2. Egységteszt
-4.3. Funkciónális teszetelés
-4.4.Tesztesetek
+#### 4.2. Egységteszt
+#### 4.3. Funkciónális teszetelés
+#### 4.4.Tesztesetek
 
-5. Felhasználói dokumentáció
-Futtatáshoz szükséges operációs rendszer: Tetszőleges operációs rendszer
-A futtatáshoz szükséges hardver: Operációs rendszerek szerint megadva
-Egyéb követelmények: Internet böngésző telepítése, JavaScript ajánlott
-Program használata:
+### 5. Felhasználói dokumentáció
+**Futtatáshoz szükséges operációs rendszer:** Tetszőleges operációs rendszer
+
+**A futtatáshoz szükséges hardver:** Operációs rendszerek szerint megadva
+
+**Egyéb követelmények:** Internet böngésző telepítése, JavaScript ajánlott
+
+**Program használata:**
 Böngészőben nyissuk meg a főoldalt
 Jobb felső sarokban kattintsunk a Bejelentkezés feliratra
 Bejelentkezés/Regisztráció után a Lista oldalra jutunk
