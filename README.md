@@ -99,7 +99,7 @@ Szerepkörök:
 #### 2.2. Felhasználói-felület modell
 ##### 2.2.1.Oldalvázlatok:
 Főoldal
-![Főoldal](/images/Főoldal.png "Főoldal")
+![Főoldal](/images/Főoldal.jpg "Főoldal")
 
 Közösségek böngészése
 
