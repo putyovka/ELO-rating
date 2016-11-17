@@ -6,14 +6,13 @@ A program célja kétszereplős játékok játékos-közösségeinek (a további
 ##### **Funkcionális követelmények:**
 **Vendégként** legyen lehetőség:
 * a főoldalon kiemelt közösségeket látni kategóriánként
-* a közösségek között szabadon böngészni
+* a közösségek között szabadon böngészni, keresni köztük
 * regisztrálni
 
 **Felhasználóként** legyen lehetőség bejelentkezni az oldalra, majd:
 * új közösséget indítani
 * saját közösséget módosítani vagy törölni
 * saját közösséghez új meccset hozzáadni
-* saját közösség meccsét módosítani vagy törölni
 
 ##### **Nem funkcionális követelmények:**
 * **Áttekinthetőség:** a játék-kategóriák színekkel vannak csoportosítva
@@ -44,7 +43,7 @@ Nemzetközileg ismert neve Elo (gyakran nagybetűkkel ELO, bár nem betűszó). 
 Szerepkörök:
 
 * **Vendég:** közösségek keresését, böngészését és megtekintését végezheti
-* **Felhasználó:** a vendég szerepkörén túl a saját közösségeinek kezelésére (új, módosít, törlés) és a a saját közösségei mérkőzéseinek (új, módosít, törlés) képes. 
+* **Felhasználó:** a vendég szerepkörén túl a saját közösségeinek kezelésére (új, módosít, törlés) és a a saját közösségei mérkőzéseinek felvitelére képes. 
 
 
 ![usecase](/images/usecase.png "usecase")
@@ -67,34 +66,31 @@ Szerepkörök:
 
 - Főoldal
 - Kilépés
-- Új közösség indítása
-- Saját közösség módosítása
-- Saját közösség törlése
-- Saját közösség megtekintése
-	- Új mérkőzés bevitele
-	- Mérkőzés módosítása
-	- Mérkőzés törlése
+- Saját közösségek
+	- Új közösség indítása
+	- Saját közösség megtekintése
+		- Új mérkőzés felvitele
+	- Saját közösség módosítása
+	- Saját közösség törlése
 
 ##### 2.1.2. Végpontok
 - GET/: főoldal
 - GET/login: bejelentkező oldal
 - POST/login: bejelentkező adatok felküldése
-- GET/login/signup: regisztrációs oldal
-- POST/login/signup: regisztrációs adatok felküldése
+- GET/register: regisztrációs oldal
+- POST/register: regisztrációs adatok felküldése
 - GET/logout: kijelentkező oldal
-- GET/communities/list: közösségek listázása
-- GET/communities/new: új közösség indítása
-- POST/communities/new: új közösség indításához szükséges adatok felküldése
-- GET/communities/id: közösség oldala
-- GET/communities/delete=id: saját közösség törlése
-- GET/communities/edit=id: saját közösség adatainak módosítása
-- POST/communities/edit=id: saját közösség módosítása, adatok felküldése
-- GET/communities/id/list: saját közösség mérkőzéseinek listázása
-- GET/communities/id/new: új mérkőzés bevitele
-- POST/communities/id/new: új mérkőzés beviteléhez szükséges adatok felküldése
-- GET/communities/id/delete=matchid: mérkőzés törlése
-- GET/communities/id/edit=matchid: mérkőzés adatainak módosítása
-- POST/communities/id/edit=matchid: mérkőzés módosítása, adatok felküldése
+- GET/communities/list: közösségek böngészése, keresés
+- GET/user/list: saját közösségek listázása
+- GET/user/createcommunity: új közösség indítása
+- POST/user/createcommunity: új közösség indításához szükséges adatok felküldése
+- GET/community/:id?: közösség oldala
+- GET/user/:id?/deletecommunity: saját közösség törlése
+- GET/user/:id?/editcommunity: saját közösség adatainak módosítása
+- POST/user/:id?/editcommunity: saját közösség módosítása, adatok felküldése
+- GET/user/:id?: saját közösség megtekintése
+- GET/user/:id?/creatematch: új mérkőzés bevitele
+- POST/user/:id?/creatematch: új mérkőzés beviteléhez szükséges adatok felküldése
 
 #### 2.2. Felhasználói-felület modell
 ##### 2.2.1.Oldalvázlatok:
@@ -148,9 +144,6 @@ Szerepkörök:
 ![Új_mérkzőzés_bevitele](/images/Új_mérkzőzés_bevitele.jpg "Új_mérkzőzés_bevitele")
 
 
-**Mérkzozés módosítása**
-
-![Mérkzozés_módosítása](/images/Mérkzozés_módosítása.jpg "Mérkzozés_módosítása")
 
 ##### 2.2.2. Osztálymodell
 
@@ -162,7 +155,7 @@ Szerepkörök:
 ##### 3.1.1. Fejlesztőkörnyezet
 Lokálisan történik a fejlesztés, Microsoft Visual Code segítségével.
 Új Github repository nyitása.
-Node.js, npm, Adonis.js telepítése.
+Node.js, npm, Express admin, Adonis.js telepítése.
 Új Adonis projekt indítása.
 Fejlesztési lépésenként a repo feltöltése commit-al.
 ##### 3.1.2. Könyvtárstruktúra, funkciók
@@ -184,23 +177,20 @@ Egységtesztelés közben a modellek működését, a problémamentes funkcióka
 **Egyéb követelmények:** Internet böngésző telepítése, JavaScript ajánlott
 
 **Program használata:**
-- Böngészőben nyissuk meg a főoldalt
-- Jobb felső sarokban kattintsunk a Bejelentkezés feliratra
 
 - Böngészőben nyissuk meg a főoldalt
-- Jobb felső sarokban kattintsunk a Bejelentkezés feliratra
-- Bejelentkezés/Regisztráció után a Lista oldalra jutunk
-- Bal alsó sarokban az Új közösség indítása gombra kattintva tudunk új közösséget indítani
-- Adjunk a közösségnek nevet, és válasszunk neki kategóriát
-- Ha már létezik ilyen néven létrehozott közösség, az oldal hibaüzenetet dob.
-- A Küldés gombra kattintva mentsük el az adatokat
+- Jobb felső sarokban kattintsunk a Regisztrácó feliratra, ha már regisztráltunk korábban, vagy Bejelentkezés feliratra, ha még nem
+- Bejelentkezés/Regisztráció után a Saját közösségek listázása oldalra jutunk
 - A Saját közösségek listázása oldalon a Törlés gombra kattintva törölhetjük a közösségünket, erről megerősítést kér egy felugró ablak
 - A Saját közösségek listázása oldalon a Módosítás gombra kattintva módosíthatjuk a közösségünk nevét és kategóriáját
 - A Saját közösségek listázása oldalon a Megtekintés gombra kattintva a megtekintés oldalra jutunk
-- A Saját közösség megtekintése oldalon bal oldalon látható a közösség renglistája, jobboldalon a bevitt meccsek listájaA Saját közösség megtekintése oldalon a Törlés gombra kattintva törölhetjük a közösségünket, erről megerősítést kér egy felugró ablak
-- A Saját közösség megtekintése oldalon a Módosítás gombra kattintva módosíthatjuk egy korábban bevitt meccsünk adatait
+- Új közösség indításához a bal felső sarokban az Új közösség indítása gombra kattintva tudunk új közösséget indítani
+- Adjunk a közösségnek nevet, és válasszunk neki kategóriát
+- Ha már létezik ilyen néven létrehozott közösség, az oldal hibaüzenetet dob
+- A Küldés gombra kattintva mentsük el az adatokat - ha ez sikeres, a Saját közösség megtekintése oldalra jutunk
+- A Saját közösség megtekintése oldalon fent látható a közösség ranglistája, lent a bevitt meccsek listája
 - A Saját közösség megtekintése oldalon az Új mérkőzés bevitele gombra kattintva tudunk új mérkőzést bevinni.
-- Az új mérkőzés bevitele oldalon meg kell adni a két játékos nevét, valamint egy legördülő menüből kiválasztani az eredményt (1 játékos nyert, 2. játékos nyert, döntetlen). 
+- Az új mérkőzés bevitele oldalon meg kell adni a két játékos nevét, egy legördülő menüből kiválasztani az eredményt (1 játékos nyert, 2. játékos nyert, döntetlen), illetve a meccs lejátszásának dátumát
 - A Küldés gombra kattintva mentsük el az adatokat
 
 ### 6. Irodalomjegyzék:
