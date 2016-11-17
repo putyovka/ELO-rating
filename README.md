@@ -160,7 +160,135 @@ Node.js, npm, Express admin, Adonis.js telepítése.
 Fejlesztési lépésenként a repo feltöltése commit-al.
 ##### 3.1.2. Könyvtárstruktúra, funkciók
 
-A GitHub repo-ban lesz látható, természetesen még nem végleges.
+A routingért a app\Http\routes.js file felelős.
+Az alkalmazás logikai része a Controllerekben található:
+	- app\Http\Controllers\UserController.js - a regisztrációval, bejelentkezéssel, kijelentkezéssel kapcsolatos feladatokat látha el
+	- app\Http\Controllers\EloController.js - az összes többit, a listázástól az objektumok létrehozásáig/módosításáig
+A database mappában van az adatbázis-fájl (.sqlite), ennek a migrations almappájában a táblák sémáit leíró fájlok.
+A nézet-fájlok a resources\views mappában találhatók. 
+	
+
+  - .editorconfig
+  - .env
+  - .env.example
+  - .gitignore
+  - 1477932223248_communities.js_BACK
+  - ace
+  - CHANGELOG.md
+  - development.sqlite_BACK
+  - development.sqlite_BACK2
+  - development.sqlite_BACK3
+  - EloController.js_back
+  - package.json
+  - package.json_BACKUP
+  - print.txt
+  - README.md
+  - server.js
+		
+  - app\
+  - app\Commands\
+      - Greet.js
+  - app\Commands\
+  - app\Http\
+      - kernel.js
+      - routes.js
+  - app\Http\Controllers\
+      - .gitkeep
+      - EloController.js
+      - UserController.js
+  - app\Http\Controllers\
+  - app\Http\Middleware\
+      - .gitkeep
+  - app\Http\Middleware\
+  - app\Http\
+  - app\Listeners\
+      - Http.js
+  - app\Listeners\
+  - app\Model\
+      - Category.js
+      - Community.js
+      - Match.js
+      - Player.js
+      - Token.js
+      - User.js
+  - app\Model\Hooks\
+      - .gitkeep
+  - app\Model\Hooks\
+  - app\Model\
+  - app\
+  - bootstrap\
+      - app.js
+      - events.js
+      - extend.js
+      - http.js
+      - kernel.js
+  - bootstrap\
+  - config\
+      - app.js
+      - auth.js
+      - bodyParser.js
+      - cors.js
+      - database.js
+      - event.js
+      - session.js
+      - shield.js
+  - config\express-admin\
+      - config.json
+      - custom.json
+      - settings.json
+      - users.json
+  - config\express-admin\
+  - config\
+  - database\
+      - development.sqlite
+      - factory.js
+  - database\migrations\
+      - .gitkeep
+      - 1477929098590_create_users_table.js
+      - 1477929098600_create_tokens_table.js
+      - 1477929385272_categories.js
+      - 1477996376142_matches.js
+      - 1478156390881_players.js
+      - 1478162436156_communities.js
+  - database\migrations\
+  - database\seeds\
+      - Database.js
+  - database\seeds\
+  - database\   
+  - providers\
+      - .gitkeep
+  - providers\
+  - public\
+      - style.css
+  - public\assets\
+      - favicon.png
+      - github.svg
+      - logo.svg
+      - twitter.svg
+  - public\assets\
+  - public\
+  - resources\
+  - resources\views\
+      - createCommunity.njk
+      - createMatch.njk
+      - editCommunity.njk
+      - listCommunities.njk
+      - login.njk
+      - main.njk
+      - master.njk
+      - ownCummunities.njk
+      - parent.njk
+      - register.njk
+      - showCommunity.njk
+      - showOwnCommunity.njk
+  - resources\views\errors\
+      - index.njk
+  - resources\views\errors\
+  - resources\views\
+  - resources\
+  - storage\
+      - .gitkeep
+  - storage\
 
 ### 4. Tesztelés
 #### 4.1. Tesztelési környezetek
