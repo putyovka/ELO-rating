@@ -46,7 +46,7 @@ Szerepkörök:
 * **Felhasználó:** a vendég szerepkörén túl a saját közösségeinek kezelésére (új, módosít, törlés) és a a saját közösségei mérkőzéseinek felvitelére képes. 
 
 
-![usecase](/images/usecase.png "usecase")
+![usecase](/images/usecasediag.png "usecase")
 
 
 
