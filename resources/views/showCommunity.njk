@@ -1,0 +1,34 @@
+{% extends "parent.njk" %}
+ 
+{% block content %}
+<h2>Közösség megtekintése</h2><br>
+
+<div class="panel panel-primary">
+      <div class="panel-heading">{{ category.name }}</div>
+      <div class="panel-body">{{ community.name }}</div>     
+</div>
+
+<div class="panel panel-default">
+    <!-- Table -->
+    <table class="table">        
+        <tr>
+            <th>Helyezés</th>
+            <th>Név</th>
+            <th>ELO-pontszám</th>
+        </tr>
+    
+        {% set j = 1 %}
+        {% for player in players %} 
+            <tr>
+                <td> {{ j }} </td>
+                <td> {{player.name}} </td>
+                <td> {{player.elo}} </td>
+                {% set j = j + 1 %}    
+            </tr>    
+        {% endfor %}  
+  </table>
+</div>
+
+
+
+{% endblock %}

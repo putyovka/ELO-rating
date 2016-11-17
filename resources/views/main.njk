@@ -1,0 +1,29 @@
+{% extends "parent.njk" %}
+
+{% block content %}
+
+<h2>Kiemelt közösségek</h2>
+
+<div class="row">
+  {% for category in categories %}
+  <div class="col-md-4 col-sm-6">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        {{ category.name }}
+        <span class="label label-warning pull-right"><a href="/community/list">Összes megtekintése<a></span>
+      </div>
+      <ul class="list-group">
+        {% for community in category.topCommunities %}
+        <li class="list-group-item">
+          <a href="/community/{{ community.id }}">
+            {{ community.name }}
+          </a>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+{% endblock %}

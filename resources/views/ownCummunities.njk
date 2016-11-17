@@ -1,0 +1,38 @@
+{% extends "parent.njk" %}
+
+{% block content %}
+
+<h2>Saját közösségek listája</h2>
+
+<a href="createcommunity" class="btn btn-default">Új közösség indítása</a>
+<br><br>
+
+<div class="panel panel-default">
+    <!-- Table -->
+    <table class="table">        
+        <tr>
+            <th>Név</th>
+            <th>Kategória</th>
+            <th>Megtekintés</th>
+            <th>Módosítás</th>
+            <th>Törlés</th>
+        </tr>       
+        
+        {% for community in communities %} 
+            <tr>                
+                <td> {{community.name}} </td>
+                    {% for category in categories %}
+                        {% if category.id == community.category_id %}
+                            <td> {{category.name}} </td>
+                        {% endif %}        
+                    {% endfor %}                  
+                <td><a href="/user/{{ community.id }}">Megtekintés</a></td>
+                <td><a href="/user/{{ community.id }}/editcommunity">Módosítás</a></td>
+                <td><a href="/user/{{ community.id }}/deletecommunity">Törlés</a></td>
+            </tr>    
+        {% endfor %}  
+  </table>
+</div>
+
+
+{% endblock %}

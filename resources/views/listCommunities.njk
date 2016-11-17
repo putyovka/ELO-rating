@@ -1,0 +1,74 @@
+
+{% extends "parent.njk" %}
+
+{% block content %}
+
+<h2>Közösségek böngészése</h2>
+<br>
+
+<form class="form-horizontal" method="GET">
+    {{ csrfField }}
+  <fieldset>
+    <legend>Keresés</legend>
+    <div class="form-group">
+      <label for="username" class="col-lg-2 control-label">Közösség neve</label>
+      <div class="col-lg-10">
+        <input type="text" class="form-control" id="name" name="name" value="" placeholder="">
+      </div>
+    </div>   
+    
+    
+    
+    <div class="form-group">
+      <div class="col-lg-10 col-lg-offset-2">
+        <button type="submit" class="btn btn-primary">Keresés</button>
+      </div>
+    </div>
+  </fieldset>
+</form>
+
+
+
+
+
+<div class="community">
+  {% for community in communities.data  %}
+  <div class="col-md-4 col-sm-6">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        {% for category in categories %}
+            {% if category.id == community.category_id %}
+                {{ category.name }}   
+            {% endif %}
+          {% endfor %}        
+      </div>
+
+      <ul class="list-group">
+        
+        <li class="list-group-item">
+          <a href="/community/{{ community.id }}">
+            {{ community.name }}
+          </a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+
+
+<br><br><br><br><br><br><br><br><br><br>
+<ul class="pagination">
+
+  {% for i in range(1, communities.lastPage + 1) %}
+    {% if (i==communities.currentPage) %}
+    <li class="active"><a href="#">{{ i }}</a></li>
+    {% else %}
+    <li><a href="?page={{ i }}">{{ i }}</a></li>
+    {% endif %}
+  {% endfor %}
+</ul>
+
+{% endblock %}

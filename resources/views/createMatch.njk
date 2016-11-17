@@ -1,0 +1,67 @@
+{% extends "parent.njk" %}
+
+{% block content %}
+
+
+  <ul>
+    {% for error in old('errors') %}
+      <li>{{ error.message }}</li>
+    {% endfor %}
+  </ul>
+<form class="form-horizontal" method="POST">
+    {{ csrfField }}
+  <fieldset>
+    <legend>Új mérkőzés felvitele</legend>
+    <div class="form-group">
+      <label for="username" class="col-lg-2 control-label">1. Játékos</label>
+      <div class="col-lg-10">
+        <input type="text" class="form-control" id="player1" name="player1" value="{{ old('player1') }}" placeholder="1. játékos">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="username" class="col-lg-2 control-label">2. Játékos</label>
+      <div class="col-lg-10">
+        <input type="text" class="form-control" id="player2" name="player2" value="{{ old('player2') }}" placeholder="2. játékos">
+      </div>
+    </div>
+
+    
+    <div class="form-group">
+        <label class="col-lg-2 control-label">Eredmény</label>
+        <div class="col-lg-10">
+            <div class="radio">
+                <label>
+                    <input type="radio" name="result" id="optionsRadios1" value="1">
+                    Az 1. játékos nyert
+                </label>
+                </div>
+
+            <div class="radio">
+                <label>
+                    <input type="radio" name="result" id="optionsRadios2" value="2">
+                    A 2. játékos nyert
+                </label>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="form-group">
+      <label for="username" class="col-lg-2 control-label">A meccs dátuma</label>
+      <div class="col-lg-10">
+        <input type="text" class="form-control" id="date" name="date" value="{{ old('date') }}" placeholder="dátum">
+      </div>
+    </div>
+
+    
+    
+    
+    <div class="form-group">
+      <div class="col-lg-10 col-lg-offset-2">
+        <button type="submit" class="btn btn-primary">Kuldés</button>
+      </div>
+    </div>
+  </fieldset>
+</form>
+{% endblock %}

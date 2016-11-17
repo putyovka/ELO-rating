@@ -1,0 +1,51 @@
+{% extends "parent.njk" %}
+
+{% block content %}
+
+
+  <ul>
+    {% for error in old('errors') %}
+      <li>{{ error.message }}</li>
+    {% endfor %}
+  </ul>
+<form class="form-horizontal" method="POST">
+    {{ csrfField }}
+  <fieldset>
+    <legend>Közösség adatainak módosítása</legend>
+    <div class="form-group">
+      <label for="username" class="col-lg-2 control-label">A közösség új neve</label>
+      <div class="col-lg-10">
+        <input type="text" class="form-control" id="name" name="name" value="{{ old('name') }}" placeholder="{{ community.name }}">
+      </div>
+    </div>
+
+    
+
+
+        <div class="form-group">
+      <label for="select" class="col-lg-2 control-label">A közösség ój kategóriája</label>
+      <div class="col-lg-10">
+        <select name="category_id" class="form-control" id="select">
+          {% for category in categories %}
+            {% if category.category_id == community.category_id %}
+                <option value="{{ category.id }}"> {{ category.name }} (régi)</option>
+            {% else %}
+                <option value="{{ category.id }}">{{ category.name }}</option>
+            {% endif %}
+            
+          {% endfor %}
+        </select>        
+      </div>
+    </div>
+
+    
+    
+    
+    <div class="form-group">
+      <div class="col-lg-10 col-lg-offset-2">
+        <button type="submit" class="btn btn-primary">Küldés</button>
+      </div>
+    </div>
+  </fieldset>
+</form>
+{% endblock %}
