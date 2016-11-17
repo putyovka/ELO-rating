@@ -35,7 +35,7 @@ Nemzetközileg ismert neve Elo (gyakran nagybetűkkel ELO, bár nem betűszó). 
 
 **Nemzetközi Sakkszövetség (FIDE)**: a Nemzetközi Sakkszövetség vagy (Fédération Internationale des Échecs, FIDE) egy nemzetközi szervezet, amely koordinálja a sakk mint sportág nemzetközi életét, nyilvántartja és minősíti a sakkversenyzőket, szervezi a férfi, női, ifjúsági és junior világbajnokságokat, a sakkolimpiákat, kontinensbajnokságokat, és egyéb nemzetközi versenyeket, meghatározza a nemzetközileg érvényes szabályokat. (Wikipedia)
 
-**Nick-név:** az igazi tulajdonnév helyettesítésére szolgáló néc.
+**Nick-név:** az igazi tulajdonnév helyettesítésére szolgáló név.
 
 
 #### 1.3. Használatieset-modell
@@ -101,7 +101,7 @@ Szerepkörök:
 
 **Közösségek böngészése**
 
-![Közösségek_böngészése](/images/Közösségek_böngészése.jpg "Közösségek_böngészése")
+![Közösségek_böngészése](/images/Közösségek_böngészése1.jpg "Közösségek_böngészése")
 
 
 **Közösség megtekintése**
@@ -121,7 +121,7 @@ Szerepkörök:
 
 **Közösségek listázása**
 
-![Közösségek_listázása](/images/Közösségek_listázása.jpg "Közösségek_listázása")
+![Közösségek_listázása](/images/Közösségek_listázása1.jpg "Közösségek_listázása")
 
 
 **Új özösség indítása**
@@ -136,7 +136,7 @@ Szerepkörök:
 
 **Saját közösség megtekintése**
 
-![Saját_közösség_megtekintése](/images/Saját_közösség_megtekintése.jpg "Saját_közösség_megtekintése")
+![Saját_közösség_megtekintése](/images/Saját_közösség_megtekintése1.jpg "Saját_közösség_megtekintése")
 
 
 **Új mérkzőzés bevitele**
@@ -148,7 +148,7 @@ Szerepkörök:
 ##### 2.2.2. Osztálymodell
 
 **Adatmodell**
-![adatmodell](/images/adatmodell.png "adatmodell")
+![adatmodell](/images/adatmodell1.png "adatmodell")
 
 
 ### 3. Implementáció
