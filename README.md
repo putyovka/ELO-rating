@@ -161,10 +161,15 @@ Fejlesztési lépésenként a repo feltöltése commit-al.
 ##### 3.1.2. Könyvtárstruktúra, funkciók
 
 A routingért a app\Http\routes.js file felelős.
+
 Az alkalmazás logikai része a Controllerekben található:
-	- app\Http\Controllers\UserController.js - a regisztrációval, bejelentkezéssel, kijelentkezéssel kapcsolatos feladatokat látha el
-	- app\Http\Controllers\EloController.js - az összes többit, a listázástól az objektumok létrehozásáig/módosításáig
+
+  - app\Http\Controllers\UserController.js - a regisztrációval, bejelentkezéssel, kijelentkezéssel kapcsolatos feladatokat látha el
+  
+  - app\Http\Controllers\EloController.js - az összes többit, a listázástól az objektumok létrehozásáig/módosításáig
+  
 A database mappában van az adatbázis-fájl (.sqlite), ennek a migrations almappájában a táblák sémáit leíró fájlok.
+
 A nézet-fájlok a resources\views mappában találhatók. 
 	
 
