@@ -212,8 +212,7 @@ A nézet-fájlok a resources\views mappában találhatók.
   - app\Model\
       - Category.js
       - Community.js
-      - Match.js
-      - Player.js
+      - Match.js      - Player.js
       - Token.js
       - User.js
   - app\Model\Hooks\
@@ -339,12 +338,12 @@ Egységtesztelés közben a modellek működését, a problémamentes funkcióka
 AJAX-os funkciók:
 #### 7.1. A keresésnél automatikusan felajánl közösségeket, amiknek prefixe az addig begépelt szöveg.
 **Érintett fájlok kliensoldalon:**
-	- public\search.js: az ajax-kérés küldéséért és a válasz feldolgozásáért felel
-	- public\search.css: a találatok formázása
+ - public\search.js: az ajax-kérés küldéséért és a válasz feldolgozásáért felel
+ - public\search.css: a találatok formázása
 **Érintett fájlok szerveroldalon:**
-	- listCommunities.njk: keresőmezőátalakítása, search.css, search.js hozzáadása
-	- Route.js: ajax-os végpont (get('/ajax/search'))
-	- EloController.js: ajaxos kereső-függvény (ajaxSearch())
+ - listCommunities.njk: keresőmezőátalakítása, search.css, search.js hozzáadása
+ - Route.js: ajax-os végpont (get('/ajax/search'))
+ - EloController.js: ajaxos kereső-függvény (ajaxSearch())
 
  **Működés:**
 A search.js-ben egy függvény feliratkozik a keresőmező input-eseméyeire, majd minden a mező tartalmát elküldi a szervernek ajax-kérésben. Az ajaxos végpont alapján a router meghívja a Controller ajaxSearch() függvényét, amely egy lekérdezést végez az adatbázisban és a válaszban visszaadja az inputra illeszkedő nevű közösségek neveit. A választ a search.js-beli függvény dolgozza fel: a találatokon végigiterálva elkészíti belőlük a megfelelő formájú linkeket, amiket konkatenál. Az így kapott stringet a listCommunities.njk-ban korábban ebből a célból elkészített "list-group community-suggestions suggestions" nevű konténer html-mezőjébe tölti.
