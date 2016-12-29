@@ -333,7 +333,7 @@ Egységtesztelés közben a modellek működését, a problémamentes funkcióka
 - https://github.com/pessaai/ckd193-beadando
 
 
-# 3. BEADANDÓ --------------------
+# 3. BEADANDÓ
 
 ### 7. Új funkciók:
  
