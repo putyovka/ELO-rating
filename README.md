@@ -337,13 +337,13 @@ Egységtesztelés közben a modellek működését, a problémamentes funkcióka
 
 ### 7. Új funkciók:
  
- AJAX-os funkciók
- 
- #### 7.1. A keresésnél automatikusan felajánl közösségeket, amiknek prefixe az addig begépelt szöveg.
- Érintett fájlok kliensoldalon:
+AJAX-os funkciók
+
+#### 7.1. A keresésnél automatikusan felajánl közösségeket, amiknek prefixe az addig begépelt szöveg.
+Érintett fájlok kliensoldalon:
 	- public\search.js: az ajax-kérés küldéséért és a válasz feldolgozásáért felel
 	- public\search.css: a találatok formázása
- Érintett fájlok szerveroldalon: 
+Érintett fájlok szerveroldalon: 
 	- listCommunities.njk: keresőmezőátalakítása, search.css, search.js hozzáadása
 	- Route.js: ajax-os végpont (get('/ajax/search'))
 	- EloController.js: ajaxos kereső-függvény (ajaxSearch())
@@ -449,7 +449,7 @@ A login.js-beli függvény feliratkozik a főoldalon lévő linkre, ami /login v
  #### 8.9. Saját közösséget törlése
  
  Végpontok elérése
-    - get főoldal
+	- get főoldal
 	- get/user/createcommunity - új közösség indítása	
 	- get/user/:id?/editcommunity - saját közösség módosítása
 	- get/user/:id?/deletecommunity - saját közösség törlése
