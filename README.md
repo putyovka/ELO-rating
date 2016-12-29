@@ -340,64 +340,75 @@ AJAX-os funkciók:
 **Érintett fájlok kliensoldalon:**
  - public\search.js: az ajax-kérés küldéséért és a válasz feldolgozásáért felel
  - public\search.css: a találatok formázása
+ 
 **Érintett fájlok szerveroldalon:**
  - listCommunities.njk: keresőmezőátalakítása, search.css, search.js hozzáadása
  - Route.js: ajax-os végpont (get('/ajax/search'))
  - EloController.js: ajaxos kereső-függvény (ajaxSearch())
 
  **Működés:**
+ 
 A search.js-ben egy függvény feliratkozik a keresőmező input-eseméyeire, majd minden a mező tartalmát elküldi a szervernek ajax-kérésben. Az ajaxos végpont alapján a router meghívja a Controller ajaxSearch() függvényét, amely egy lekérdezést végez az adatbázisban és a válaszban visszaadja az inputra illeszkedő nevű közösségek neveit. A választ a search.js-beli függvény dolgozza fel: a találatokon végigiterálva elkészíti belőlük a megfelelő formájú linkeket, amiket konkatenál. Az így kapott stringet a listCommunities.njk-ban korábban ebből a célból elkészített "list-group community-suggestions suggestions" nevű konténer html-mezőjébe tölti.
 
 
   #### 7.2. Közösség törlésénél ugorjon fel egy megerősítő-ablak
  
  **Érintett fájlok kliensoldalon:**
-	- show.js
+ - show.js
+	
  **Érintett fájlok szerveroldalon:**
-	- Route.js: ajax-os végpont (delete('/ajax/user/:id?/deletecommunity'))
-	- EloController.js: ajaxos delete-függvény (ajaxDelete())
-	- ownCommunities.njk: a Törlés funkciót már nem egy egyszerű linkkel lehet elérni, hanem egy form-ba ágyazott gombbal; modális ablak elhelyezése, amely kezdetben rejtett
+ - Route.js: ajax-os végpont (delete('/ajax/user/:id?/deletecommunity'))
+ - EloController.js: ajaxos delete-függvény (ajaxDelete())
+ - ownCommunities.njk: a Törlés funkciót már nem egy egyszerű linkkel lehet elérni, hanem egy form-ba ágyazott gombbal; modális ablak elhelyezése, amely kezdetben rejtett
 
  **Működés:**
+ 
 Az egyik közösséghez tartozó Törlés gombra való kattintáskor meghívódik egy függvény (show.js 25. sor), amelyik egyrészt letiltja a form default működését, másrészt láthatóvá teszi a megerősítő ablakot. Ha itt a felhasználó az OK gombra kattint, egy AJAX-függvény került meghívásra, melynek url-je a gomb default action-je egy 'ajax/' prefixxel kiegészítve. A Router ehhez meghívja az EloController.js-ben található ajaxDeleteCommunity() függvényt, amely az eredeti (nem-ajaxos) logikához hasonlóan elvégzi a törlést. Siker esetén a kiinduló oldalra irányít vissza a függvény (/user/list), különben hibaüzenetet ad (alert-tel).
 	
  
   #### 7.3. AJAX-os login
+  
  **Érintett fájlok kliensoldalon:**
-	- public\login.js: az ajax-os bejelentkezésért felel
+ - public\login.js: az ajax-os bejelentkezésért felel
+ 
  **Érintett fájlok szerveroldalon:**
-	- login.njk: a form nevének átalakítása
-	- parent.njk: login.js beszúrása
-	- Route.js: ajax-os végpont (get('/ajax/login'))
-	- UserController.js: ajaxos login-függvény (ajaxLogin())
+ - login.njk: a form nevének átalakítása
+ - parent.njk: login.js beszúrása
+ - Route.js: ajax-os végpont (get('/ajax/login'))
+ - UserController.js: ajaxos login-függvény (ajaxLogin())
 	
  **Működés:**
+ 
 A login.js-beli függvény feliratkozik a főoldalon lévő linkre, ami /login végpontra visz kikapcsolt javascript esetén. A linkre való navigálást letiltja, egy változóba felépíti a belépéshez szükséges dialógus-ablak html-vázát (a hibaüzenetet-részt elrejtve), majd a vázba betölti az eredeti login-oldal belépési űrlapját. Submit esetén AJAX-kérést küld a szervernek az űrlap-adatokkal, a router a végpont alapján meghívja a UserController ajaxLogin() függvényét, ami a 'sima' változat logikához hasonlóan megprólja a beléptetni a felhasználót. Hiba esetén az a modális ablak hibaüzenetet-része mutatásra előbukkan és a belépés nem sikerült. Különben a felhasználó bejelentkezése sikeres, és - az előző beadandóhoz hasonlóan - a saját közösségek listázása oldalra irányítódik át. 
  
  
  
  AJAX nélküli funkciók
  
-  #### 7.4. Regisztrációnál már kliensoldalon megtörténik az adatok ellenőrzése
-	**Érintett fájlok kliensoldalon:** nincs ilyen
- **Érintett fájlok szerveroldalon:**
-	- register.njk: a form átalakítása a bootstrap validator elvárásainak megfelelően; a bootstrap validator script-jének a beemelése
+#### 7.4. Regisztrációnál már kliensoldalon megtörténik az adatok ellenőrzése
+**Érintett fájlok kliensoldalon:** nincs ilyen
+
+**Érintett fájlok szerveroldalon:**
+ - register.njk: a form átalakítása a bootstrap validator elvárásainak megfelelően; a bootstrap validator script-jének a beemelése
  
  **Működés:**
+ 
  A funkció a bootstrap validátorán alapul, ennek a szkriptjét hozzá kell adni az oldalhoz. 
  Az űrlap azon mezőit, amelyeknél nincsenek formai megkötések, elég a 'required' kikötéssel ellátni - ilyenek a Felhasználónév, Vezetéknév, Keresztnév és Jelszó mezők. Az Email mezőnél a típust type="text"-ről type="email"-re kell cserélni, ki kell egészíteni ezt is egy 'required' kikötéssel, meg kell adni a hiba esetén küldendő üzenetet (data-error="Hibás email-formátum!"), valamint egy új div-et kell beiktatni a blokkjába, amelyben hiba esetén az üzenet megjelenik: '<div class="help-block with-errors"></div>'. A jelszó-megerősítő mezőnél a jelszó-mezővel való egyezés a megszorítás (data-match="#inputPassword"), a hibaüzenetet pedig: data-match-error="Nem egyezik a két jelszó!" - az email-hez hasonlóan szükséges egy ezt tartalmazó div-el kiegészíteni.
  
 
-  #### 7.5. Új mérkőzés bevitelekor már kliensoldalon megtörténik az adatok ellenőrzése
-	**Érintett fájlok kliensoldalon:** nincs ilyen
- 	**Érintett fájlok szerveroldalon:**
-	- createMatch.njk: a form átalakítása a bootstrap validator elvárásainak megfelelően; a bootstrap validator script-jének a beemelése
+#### 7.5. Új mérkőzés bevitelekor már kliensoldalon megtörténik az adatok ellenőrzése
+ **Érintett fájlok kliensoldalon:** nincs ilyen
+ 
+ **Érintett fájlok szerveroldalon:**
+ - createMatch.njk: a form átalakítása a bootstrap validator elvárásainak megfelelően; a bootstrap validator script-jének a beemelése
  
  **Működés:**
+ 
  A funkció a bootstrap validátorán alapul, ennek a szkriptjét hozzá kell adni az oldalhoz. 
  Az 1. játékos, 2. játékos és a dátum mezőket ki kell egészítenia 'required' kikötéssel, így pirossal fogja a mezőket szegélyezni, ha ezek hiányoznak. Ezen kívül a dátum mező típusát type="text"-ről a type="date" html5-ös attribútumra változtattam.
  
-  ### 8. Tesztelés
+### 8. Tesztelés
  
   Az automatikus tesztek a Selenium IDE segítségével történtek. Ez Firefox böngészőbe telepíthető add-on (https://addons.mozilla.org/hu/firefox/addon/selenium-ide/), amellyel rögzíthető a weboldalakon végzett tevékenység, és ezt elmentve később bármikor "visszajátsztható", így bárki meggyőződhet arról, hogy egy funkció helyesen működik és hibás inputokra megfelelően reagál. A dokumentációban használt számozás megegyezik a tesztesetek file-neveivel, amiket a főkönyvtárban lehet megtalálni.
   
