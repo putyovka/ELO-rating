@@ -2,53 +2,59 @@
 
 {% block content %}
 
+{% block scripts %}
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.5/validator.min.js"></script>
+{% endblock %}
+
   <ul>
     {% for error in old('errors') %}
       <li>{{ error.message }}</li>
     {% endfor %}
   </ul>
-<form class="form-horizontal" method="POST">
+<form class="form-horizontal" method="POST" data-toggle="validator" id="form">
     {{ csrfField }}
   <fieldset>
     <legend>Regisztráció</legend>
     <div class="form-group">
       <label for="username" class="col-lg-2 control-label">Felhasználónév</label>
       <div class="col-lg-10">
-        <input type="text" class="form-control" id="inputUsername" name="username" value="{{ old('username') }}" placeholder="Felhasználónév">
+        <input type="text" class="form-control" id="inputUsername" name="username" value="{{ old('username') }}" placeholder="Felhasználónév" required>        
       </div>
     </div>
     <div class="form-group">
       <label for="inputEmail" class="col-lg-2 control-label">Email</label>
       <div class="col-lg-10">
-        <input type="text" class="form-control" id="inputEmail" name="email" value="{{ old('email') }}" placeholder="Email">
+        <input type="email" class="form-control" id="inputEmail" name="email" placeholder="Email" value="{{ old('email') }}"  data-error="Hibás email-formátum!" required>
+    <div class="help-block with-errors"></div>
       </div>
     </div>
 
     <div class="form-group">
       <label for="lastname" class="col-lg-2 control-label">Vezetéknév</label>
       <div class="col-lg-10">
-        <input type="text" class="form-control" id="inputLastname" name="lastname" value="{{ old('lastname') }}" placeholder="Vezetéknév">
+        <input type="text" class="form-control" id="inputLastname" name="lastname" value="{{ old('lastname') }}" placeholder="Vezetéknév" required>
       </div>
     </div>
     <div class="form-group">
       <label for="firstname" class="col-lg-2 control-label">Keresztnév</label>
       <div class="col-lg-10">
-        <input type="text" class="form-control" id="inputFirstname" name="firstname" value="{{ old('firstname') }}" placeholder="Keresztnév">
+        <input type="text" class="form-control" id="inputFirstname" name="firstname" value="{{ old('firstname') }}" placeholder="Keresztnév" required>
       </div>
     </div>
 
     <div class="form-group">
       <label for="inputPassword" class="col-lg-2 control-label">Jelszó</label>
       <div class="col-lg-10">
-        <input type="password" class="form-control" id="inputPassword" name="password" placeholder="Jelszó">
-    
+         <input type="password" class="form-control" id="inputPassword" name="password" placeholder="Password" required data-error="Kötelező kitölteni!">
+        <div class="help-block"></div>    
       </div>
     </div>
     
     <div class="form-group">
       <label for="inputPassword2" class="col-lg-2 control-label">Jelszó megerősítése</label>
       <div class="col-lg-10">
-        <input type="password" class="form-control" name="password2" id="inputPassword2" placeholder="Jelszó megerősítése">
+        <input type="password" class="form-control"  name="password2" id="inputPassword2" data-match="#inputPassword" data-match-error="Nem egyezik a két jelszó!" placeholder="Jelszó megerősítése" required>
+        <div class="help-block with-errors"></div>
       </div>
     </div>
     <div class="form-group">

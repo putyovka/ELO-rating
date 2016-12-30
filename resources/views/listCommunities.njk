@@ -3,29 +3,34 @@
 
 {% block content %}
 
+
+{% block scripts %}
+  <link href="/search.css" rel="stylesheet">
+   <script
+    src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
+    <script src="/search.js"></script>
+{% endblock %}
+
+
 <h2>Közösségek böngészése</h2>
 <br>
 
-<form class="form-horizontal" method="GET">
-    {{ csrfField }}
-  <fieldset>
-    <legend>Keresés</legend>
-    <div class="form-group">
-      <label for="username" class="col-lg-2 control-label">Közösség neve</label>
-      <div class="col-lg-10">
-        <input type="text" class="form-control" id="name" name="name" value="" placeholder="">
-      </div>
-    </div>   
-    
-    
-    
-    <div class="form-group">
-      <div class="col-lg-10 col-lg-offset-2">
-        <button type="submit" class="btn btn-primary">Keresés</button>
-      </div>
-    </div>
-  </fieldset>
+<form id="search" action="/community/list" method="GET">
+  {{ csrfField | safe }}  
+  <div class="input-group search-box">
+    <input type="text" class="form-control community-search" id="name" placeholder="Keresés..." name="name" value="" autocomplete="off">
+    <div class="list-group community-suggestions suggestions"></div>
+    <span class="input-group-btn">
+      <button class="btn btn-info" type="submit">Mehet!</button>
+    </span>
+  </div>
 </form>
+
+
+
+<br><br>
 
 
 
