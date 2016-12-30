@@ -72,9 +72,9 @@ class EloController {
             response.notFound('Community not found.')
             return
         }
-        const currtUser = request.currentUser.username;
-        if (currtUser){
-            if (community.owner == currtUser){
+        const currtUser = request.currentUser;
+        if (currtUser != null){
+            if (community.owner == currtUser.username){
                 response.redirect('/user/' + community.id)
             }
         }
