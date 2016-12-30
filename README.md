@@ -416,63 +416,63 @@ Automatikus tesztesetek Selenium IDE használatával:
 #### 8.1. Regisztráció
 ##### 8.1.1 Kikapcsolt javascript-el
 ###### 8.1.1.1 Sikeres reisztráció
-		###### 8.1.1.2 Sikertelen reisztráció - foglalt felhasználónév
-		###### 8.1.1.3 Sikertelen reisztráció - foglalt email-cím
-		###### 8.1.1.4 Sikertelen reisztráció - nem egyezik a két jelszó
-		###### 8.1.1.5 Sikertelen reisztráció - hiányzó mezők (vezetéknév, keresztnév, felhasználónév, email, jelszó)
+###### 8.1.1.2 Sikertelen reisztráció - foglalt felhasználónév
+###### 8.1.1.3 Sikertelen reisztráció - foglalt email-cím
+###### 8.1.1.4 Sikertelen reisztráció - nem egyezik a két jelszó
+###### 8.1.1.5 Sikertelen reisztráció - hiányzó mezők (vezetéknév, keresztnév, felhasználónév, email, jelszó)
 ##### 8.1.2 Bekapcsolt javascript-el
-		###### 8.1.2.1 Sikeres reisztráció
-		###### 8.1.2.2 Sikertelen reisztráció - hiányzó mezők (felhasználónév, vezetéknév, keresztnév, jelszó), hibás email-formátum, nem egyezik a két jelszó
- #### 8.2. Login
-&nbsp;##### 8.2.1 Kikapcsolt javascript-el
-&nbsp;&nbsp;###### 8.2.1.1 Sikeres login
-&nbsp;&nbsp;###### 8.2.1.2 Sikertelen login - nem létező felhasználó/jelszó-páros
-	##### 8.2.2 Bekapcsolt javascript-el
-		###### 8.2.2.1 Sikeres login
-		###### 8.2.2.2 Sikertelen login - nem létező felhasználó/jelszó-páros
- #### 8.3. Új közösség indítása (előtte login szükséges)
-	##### 8.3.1 Sikeres indítás
-	##### 8.3.2 Sikertelen indítás - 
- #### 8.4. Új mérkőzés bevitele (előtte login szükséges)
-	##### 8.4.1 Kikapcsolt javascript-el
-		###### 8.4.1.1 Sikeres bevitel
-		###### 8.4.1.2 Sikertelen bevitel - hiányzó mezők (1. játékos, 2. játékos, eredmény, dátum)
-		###### 8.4.1.3 Sikertelen bevitel - hibás dátum-formátum
-	##### 8.4.2 Bekapcsolt javascript-el
-		###### 8.4.2.1 Sikeres bevitel
-		###### 8.4.2.2 Sikertelen bevitel - hiányzó mezők (1. játékos, 2. játékos, eredmény, dátum)
- #### 8.5. Kilépés (előtte login szükséges)
+###### 8.1.2.1 Sikeres reisztráció
+###### 8.1.2.2 Sikertelen reisztráció - hiányzó mezők (felhasználónév, vezetéknév, keresztnév, jelszó), hibás email-formátum, nem egyezik a két jelszó
+#### 8.2. Login
+##### 8.2.1 Kikapcsolt javascript-el
+###### 8.2.1.1 Sikeres login
+###### 8.2.1.2 Sikertelen login - nem létező felhasználó/jelszó-páros
+##### 8.2.2 Bekapcsolt javascript-el
+###### 8.2.2.1 Sikeres login
+###### 8.2.2.2 Sikertelen login - nem létező felhasználó/jelszó-páros
+#### 8.3. Új közösség indítása (előtte login szükséges)
+##### 8.3.1 Sikeres indítás
+##### 8.3.2 Sikertelen indítás - 
+#### 8.4. Új mérkőzés bevitele (előtte login szükséges)
+##### 8.4.1 Kikapcsolt javascript-el
+###### 8.4.1.1 Sikeres bevitel
+###### 8.4.1.2 Sikertelen bevitel - hiányzó mezők (1. játékos, 2. játékos, eredmény, dátum)
+###### 8.4.1.3 Sikertelen bevitel - hibás dátum-formátum
+##### 8.4.2 Bekapcsolt javascript-el
+###### 8.4.2.1 Sikeres bevitel
+###### 8.4.2.2 Sikertelen bevitel - hiányzó mezők (1. játékos, 2. játékos, eredmény, dátum)
+#### 8.5. Kilépés (előtte login szükséges)
  
- További tesztesetek (manuálisan végezve):
- #### 8.6. Keresés  a Közösségek böngészése oldalon
-	##### 8.6.1 Keresőmező működése
-		###### 8.6.1.1 Keresés kikapcsolt javascript-el
-		###### 8.6.1.2 Keresés bekapcsolt javascript-el
- #### 8.7. Közösség megtekintése
-	##### 8.7.1 Vendégként
-	##### 8.7.2 Bejelentkezve
-		###### 8.7.2.1 Saját közösség megtekintése
-		###### 8.7.2.2 Más felhasználó tulajdonában lévő közösség megtekintése
- #### 8.8. Saját közösséget módosítása
- #### 8.9. Saját közösséget törlése
+További tesztesetek (manuálisan végezve):
+#### 8.6. Keresés  a Közösségek böngészése oldalon
+##### 8.6.1 Keresőmező működése
+###### 8.6.1.1 Keresés kikapcsolt javascript-el
+###### 8.6.1.2 Keresés bekapcsolt javascript-el
+#### 8.7. Közösség megtekintése
+##### 8.7.1 Vendégként
+##### 8.7.2 Bejelentkezve
+###### 8.7.2.1 Saját közösség megtekintése
+###### 8.7.2.2 Más felhasználó tulajdonában lévő közösség megtekintése
+#### 8.8. Saját közösséget módosítása
+#### 8.9. Saját közösséget törlése
  
- Végpontok elérése
-	- get főoldal
-	- get/user/createcommunity - új közösség indítása	
-	- get/user/:id?/editcommunity - saját közösség módosítása
-	- get/user/:id?/deletecommunity - saját közösség törlése
-	- get/user/list - saját közösségek listázása
-	- get/user/:id?/creatematch - új mérkőzés bevitele	
-	- get/user/:id? - saját közösség megtekintése
-	- get/community/list - közösségek listázása
-	- get/community/:id? - közösség megtekintése (nem sajátként)
-	- get/register - reisztráció
-	- get/login - bejelentkezés
-	- get/logout - kijelentkezés
-	- get/search - közösség keresése
-	- delete/ajax/user/:id?/deletecommunity - közösség ajax-os törlése
-	- get/ajax/search - közösség ajax-os keresése
-	- post/ajax/login - ajax-os bejelentkezés
+Végpontok elérése
+- get főoldal
+- get/user/createcommunity - új közösség indítása	
+- get/user/:id?/editcommunity - saját közösség módosítása
+- get/user/:id?/deletecommunity - saját közösség törlése
+- get/user/list - saját közösségek listázása
+- get/user/:id?/creatematch - új mérkőzés bevitele	
+- get/user/:id? - saját közösség megtekintése
+- get/community/list - közösségek listázása
+- get/community/:id? - közösség megtekintése (nem sajátként)
+- get/register - reisztráció
+- get/login - bejelentkezés
+- get/logout - kijelentkezés
+- get/search - közösség keresése
+- delete/ajax/user/:id?/deletecommunity - közösség ajax-os törlése
+- get/ajax/search - közösség ajax-os keresése
+- post/ajax/login - ajax-os bejelentkezés
 	
 	
  
