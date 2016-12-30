@@ -72,6 +72,13 @@ class EloController {
             response.notFound('Community not found.')
             return
         }
+        const currtUser = request.currentUser.username;
+        if (currtUser){
+            if (community.owner == currtUser){
+                response.redirect('/user/' + community.id)
+            }
+        }
+        
         //yield community.related('category').load()
                
         const category = yield Category.findBy('id',community.category_id);
@@ -163,6 +170,34 @@ class EloController {
         
         yield community.delete()
         response.redirect('/user/list')
+  }
+
+    * ajaxDeleteCommunity (request, response) {
+        
+        const isLoggedIn = yield request.auth.check()
+        if (!isLoggedIn) {
+            response.redirect('/login')
+        }
+
+        const currtUser = request.currentUser.username;
+        const id = request.param('id');
+                
+        const community = yield Community.findBy('id', id) 
+            
+        if (!community) {
+            response.notFound('Nincs ilyen közösség.')
+            return
+        }   
+
+        if (community.owner != currtUser){
+            response.unauthorized('Belépés megtagadva.')
+        }
+        
+        
+        yield community.delete()
+        yield response.ok({
+            message:'OK!'
+        });
   }
 
 
@@ -417,6 +452,21 @@ class EloController {
             response.redirect('/user/' + community_id)
         }
 */
+
+    * ajaxSearch(req, res){
+         var query = req.input('name');
+        if(!query){
+            res.ok([]);
+            return;
+        }
+
+        var communities = yield Community.query()
+        .where(function () {
+            this.where('name','LIKE', '%'+query+'%')
+        });
+
+        res.ok(communities);
+    }
 
 
     
