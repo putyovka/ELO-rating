@@ -336,7 +336,7 @@ Egységtesztelés közben a modellek működését, a problémamentes funkcióka
 
 ### 7. Új funkciók 
 AJAX-os funkciók:
-#### 7.1. A keresésnél automatikusan felajánl közösségeket, amiknek prefixe az addig begépelt szöveg.
+#### 7.1. A keresésnél automatikusan felajánl közösségeket, amelyek nevére illeszkedik az addig begépelt szöveg.
 **Érintett fájlok kliensoldalon:**
 - public\search.js: az ajax-kérés küldéséért és a válasz feldolgozásáért felel
 - public\search.css: a találatok formázása
@@ -360,6 +360,8 @@ A search.js-ben egy függvény feliratkozik a keresőmező input-eseméyeire, ma
 - Route.js: ajax-os végpont (delete('/ajax/user/:id?/deletecommunity'))
 - EloController.js: ajaxos delete-függvény (ajaxDelete())
 - ownCommunities.njk: a Törlés funkciót már nem egy egyszerű linkkel lehet elérni, hanem egy form-ba ágyazott gombbal; modális ablak elhelyezése, amely kezdetben rejtett
+
+![sequence](/images/sequence.png "sequence")
 
 **Működés:**
  
@@ -410,7 +412,7 @@ Az 1. játékos, 2. játékos és a dátum mezőket ki kell egészítenia 'requi
  
 ### 8. Tesztelés
  
- Az automatikus tesztek a Selenium IDE segítségével történtek. Ez Firefox böngészőbe telepíthető add-on (https://addons.mozilla.org/hu/firefox/addon/selenium-ide/), amellyel rögzíthető a weboldalakon végzett tevékenység, és ezt elmentve később bármikor "visszajátsztható", így bárki meggyőződhet arról, hogy egy funkció helyesen működik és hibás inputokra megfelelően reagál. A dokumentációban használt számozás megegyezik a tesztesetek file-neveivel, amiket a főkönyvtárban lehet megtalálni.
+ Az automatikus tesztek a Selenium IDE segítségével történtek. Ez Firefox böngészőbe telepíthető add-on (https://addons.mozilla.org/hu/firefox/addon/selenium-ide/), amellyel rögzíthető a weboldalakon végzett tevékenység, és ezt elmentve később bármikor "visszajátsztható", így bárki meggyőződhet arról, hogy egy funkció helyesen működik és hibás inputokra megfelelően reagál. A dokumentációban használt számozás megegyezik a tesztesetek file-neveivel, amiket a test könyvtárban lehet megtalálni.
   
 Automatikus tesztesetek Selenium IDE használatával:
 #### 8.1. Regisztráció
