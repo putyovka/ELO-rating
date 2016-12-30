@@ -34,7 +34,7 @@ Route.post('/user/:id?/creatematch', 'EloController.createNewMatch');
 
 Route.get('/user/:id?', 'EloController.showOwnCommunity');
 
-Route.get('/community/list', 'EloController.listCommunities');
+Route.get('/community/list', 'EloController.listCommunities');              // browse communities
 Route.get('/community/:id?', 'EloController.showCommunity');
 
 
@@ -43,3 +43,18 @@ Route.post('/register', 'UserController.registerSubmit');
 Route.get('/login', 'UserController.login');
 Route.post('/login', 'UserController.loginSubmit');
 Route.get('/logout', 'UserController.logout');
+
+Route.get('/search', 'RecipeController.search');                        // főoldali keresőmező
+
+// AJAX
+Route.delete('/ajax/user/:id?/deletecommunity', 'EloController.ajaxDeleteCommunity');
+Route.get('/ajax/search', 'EloController.ajaxSearch');
+Route.post('/ajax/login', 'UserController.ajaxLogin')
+/*
+Route.group('ajax', function () {
+  //Route.delete('/recipe/:id/delete', 'RecipeController.ajaxDelete')
+  //Route.get('/search', 'RecipeController.ajaxSearch')
+  //Route.post('/login', 'UserController.ajaxLogin')
+  Route.get('/user/{{ community.id }}/deletecommunity', 'EloController.ajaxDeleteCommunity');
+}).prefix('/ajax');
+*/
