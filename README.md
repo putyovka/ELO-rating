@@ -432,7 +432,7 @@ Automatikus tesztesetek Selenium IDE használatával:
 ###### 8.2.2.2 Sikertelen login - nem létező felhasználó/jelszó-páros
 #### 8.3. Új közösség indítása (előtte login szükséges)
 ##### 8.3.1 Sikeres indítás
-##### 8.3.2 Sikertelen indítás - 
+##### 8.3.2 Sikertelen indítás - hiányzó mező (közösség neve)
 #### 8.4. Új mérkőzés bevitele (előtte login szükséges)
 ##### 8.4.1 Kikapcsolt javascript-el
 ###### 8.4.1.1 Sikeres bevitel
@@ -456,7 +456,7 @@ További tesztesetek (manuálisan végezve):
 #### 8.8. Saját közösséget módosítása
 #### 8.9. Saját közösséget törlése
  
-Végpontok elérése
+#### 8.10.Végpontok elérése
 - get főoldal
 - get/user/createcommunity - új közösség indítása	
 - get/user/:id?/editcommunity - saját közösség módosítása
@@ -473,6 +473,3 @@ Végpontok elérése
 - delete/ajax/user/:id?/deletecommunity - közösség ajax-os törlése
 - get/ajax/search - közösség ajax-os keresése
 - post/ajax/login - ajax-os bejelentkezés
-	
-	
- 
