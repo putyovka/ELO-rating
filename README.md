@@ -412,21 +412,21 @@ Az 1. játékos, 2. játékos és a dátum mezőket ki kell egészítenia 'requi
  
  Az automatikus tesztek a Selenium IDE segítségével történtek. Ez Firefox böngészőbe telepíthető add-on (https://addons.mozilla.org/hu/firefox/addon/selenium-ide/), amellyel rögzíthető a weboldalakon végzett tevékenység, és ezt elmentve később bármikor "visszajátsztható", így bárki meggyőződhet arról, hogy egy funkció helyesen működik és hibás inputokra megfelelően reagál. A dokumentációban használt számozás megegyezik a tesztesetek file-neveivel, amiket a főkönyvtárban lehet megtalálni.
   
- Automatikus tesztesetek Selenium IDE használatával:
- #### 8.1. Regisztráció
-	##### 8.1.1 Kikapcsolt javascript-el
-		###### 8.1.1.1 Sikeres reisztráció
+Automatikus tesztesetek Selenium IDE használatával:
+#### 8.1. Regisztráció
+##### 8.1.1 Kikapcsolt javascript-el
+###### 8.1.1.1 Sikeres reisztráció
 		###### 8.1.1.2 Sikertelen reisztráció - foglalt felhasználónév
 		###### 8.1.1.3 Sikertelen reisztráció - foglalt email-cím
 		###### 8.1.1.4 Sikertelen reisztráció - nem egyezik a két jelszó
 		###### 8.1.1.5 Sikertelen reisztráció - hiányzó mezők (vezetéknév, keresztnév, felhasználónév, email, jelszó)
-	##### 8.1.2 Bekapcsolt javascript-el
+##### 8.1.2 Bekapcsolt javascript-el
 		###### 8.1.2.1 Sikeres reisztráció
 		###### 8.1.2.2 Sikertelen reisztráció - hiányzó mezők (felhasználónév, vezetéknév, keresztnév, jelszó), hibás email-formátum, nem egyezik a két jelszó
  #### 8.2. Login
-	##### 8.2.1 Kikapcsolt javascript-el
-		###### 8.2.1.1 Sikeres login
-		###### 8.2.1.2 Sikertelen login - nem létező felhasználó/jelszó-páros
+&nbsp;##### 8.2.1 Kikapcsolt javascript-el
+&nbsp;&nbsp;###### 8.2.1.1 Sikeres login
+&nbsp;&nbsp;###### 8.2.1.2 Sikertelen login - nem létező felhasználó/jelszó-páros
 	##### 8.2.2 Bekapcsolt javascript-el
 		###### 8.2.2.1 Sikeres login
 		###### 8.2.2.2 Sikertelen login - nem létező felhasználó/jelszó-páros
